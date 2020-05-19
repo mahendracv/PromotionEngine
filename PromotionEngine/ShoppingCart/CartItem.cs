@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PromotionEngine.ShoppingCart
+﻿namespace PromotionEngine.ShoppingCart
 {
     /// <summary>
     /// Individual Order Item

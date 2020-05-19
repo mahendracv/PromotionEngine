@@ -1,16 +1,14 @@
 ﻿using PromotionEngine.Interfaces;
 using PromotionEngine.ShoppingCart;
 using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace PromotionEngine.Rules
 {
+    [Description("Buy C & D for 30")]
     public class PromotionCD : IPromotion
     {
-        string PromotionDescription = "Buy C & D for 30";
-
         char PromotionSKUIDC = 'C';
         int PromotionQuantityC = 1;
 

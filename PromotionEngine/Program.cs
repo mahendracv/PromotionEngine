@@ -2,12 +2,12 @@
 
 namespace PromotionEngine
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
-        }
-    }
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Console.WriteLine("Sample Promotion Engine");
+    //        Console.ReadLine();
+    //    }
+    //}
 }

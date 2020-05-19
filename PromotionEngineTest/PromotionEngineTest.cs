@@ -1,5 +1,4 @@
 using PromotionEngine.ShoppingCart;
-using System;
 using System.Collections.Generic;
 using Xunit;
 

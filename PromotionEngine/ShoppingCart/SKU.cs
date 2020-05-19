@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace PromotionEngine.ShoppingCart
 {
+    /// <summary>
+    /// Defines Product SKU and Price
+    /// </summary>
     public class SKU
     {
         public char SKUID { get; set; }

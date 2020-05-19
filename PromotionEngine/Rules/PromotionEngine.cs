@@ -1,11 +1,12 @@
 ﻿using PromotionEngine.Interfaces;
 using PromotionEngine.ShoppingCart;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace PromotionEngine.Rules
 {
+    /// <summary>
+    /// PromotionEngine apply Promotions on the cart
+    /// </summary>
     public class PromotionEngine
     {
         List<IPromotion> rules;

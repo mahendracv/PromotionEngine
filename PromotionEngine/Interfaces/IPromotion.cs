@@ -1,10 +1,10 @@
 ﻿using PromotionEngine.ShoppingCart;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PromotionEngine.Interfaces
 {
+    /// <summary>
+    /// Supports ApplyPromotion() on Cart items
+    /// </summary>
     public interface IPromotion
     {
         Cart ApplyPromotion(Cart cart);
