@@ -15,6 +15,7 @@ namespace PromotionEngine.Rules
             rules = new List<IPromotion>();
             rules.Add(new PromotionA());
             rules.Add(new PromotionB());
+            rules.Add(new PromotionCD());
         }
 
         public Cart ApplyPromotion(Cart cart)
