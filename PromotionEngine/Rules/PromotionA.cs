@@ -9,7 +9,7 @@ namespace PromotionEngine.Rules
 {
     public class PromotionA : IPromotion
     {
-        private string Description = "Buy 3 items of A's for 130";
+        string PromotionDescription = "Buy 3 items of A's for 130";
 
         char PromotionSKUID = 'A';
         int PromotionQuantity = 3;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace PromotionEngine.ShoppingCart
@@ -16,10 +17,12 @@ namespace PromotionEngine.ShoppingCart
         /// </summary>
         public List<CartItem> OrderItems { get; set; }
 
+        Rules.PromotionEngine ruleEngine;
         public Cart()
         {
             SKUList = SKU.GetList();
             OrderItems = new List<CartItem>();
+            ruleEngine = new Rules.PromotionEngine();
         }
 
         /// <summary>
@@ -28,7 +31,18 @@ namespace PromotionEngine.ShoppingCart
         /// <returns></returns>
         public double CalculateTotal()
         {
-            return 100;
+            var cart = ruleEngine.ApplyPromotion(this);
+
+            double result = 0.0;
+            foreach (var product in cart.OrderItems)
+            {
+                SKU sku = this.SKUList.FindAll(x => x.SKUID.Equals(product.SKUID)).FirstOrDefault();
+                product.Price = sku.Price;
+
+                result += product.PromotionalPricing + (product.Quantity * sku.Price);
+            }
+
+            return result;
         }
     }
 }
